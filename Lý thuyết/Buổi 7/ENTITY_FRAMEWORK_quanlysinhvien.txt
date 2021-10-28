@@ -1,0 +1,17 @@
+CREATE TABLE SinhVien (
+  masv  varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  tensv varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  diemtb double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+INSERT INTO SinhVien (masv, tensv, diemtb) VALUES
+(1, 'uyen', 8.75);
+INSERT INTO SinhVien (masv, tensv, diemtb) VALUES
+(1, 'phuong', 8.75);
+INSERT INTO SinhVien (masv, tensv, diemtb) VALUES
+(1, 'toan', 8.75);
+INSERT INTO SinhVien (masv, tensv, diemtb) VALUES
+(1, 'thien', 8.75);
+INSERT INTO SinhVien (masv, tensv, diemtb) VALUES
+(1, 'thanh', 8.75);
