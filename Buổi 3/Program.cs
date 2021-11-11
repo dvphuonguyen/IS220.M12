@@ -629,7 +629,7 @@ namespace MyConnection
 
         public static void cau30(MySqlConnection conn)
         {​​​​​​
-            string sql = "select MASP, TENSP from SANPHAM sp where GIA in (select distinct top 3  GIA from SANPHAM order by GIA desc)";
+            string sql = "select MASP, TENSP from SANPHAM sp where GIA in (select * from (select GIA from SanPham order by GIA desc limit 3) as T1)";
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conn;
             cmd.CommandText = sql;
@@ -652,7 +652,7 @@ namespace MyConnection
 
         public static void cau31(MySqlConnection conn)
         {​​​​​​
-            string sql = "select MASP, TENSP from SANPHAM sp  where NUOCSX = 'Thai Lan' and GIA in (select distinct top 3  GIA from SANPHAM order by GIA desc)";
+            string sql = "select MASP, TENSP from SANPHAM sp where NUOCSX = 'Thai Lan' and GIA in (select * from (select GIA from SanPham order by GIA desc limit 3) as T1)";
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conn;
             cmd.CommandText = sql;
