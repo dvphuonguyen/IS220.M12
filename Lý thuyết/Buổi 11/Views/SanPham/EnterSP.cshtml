@@ -1,0 +1,53 @@
+﻿@model DangVuPhuongUyen_19520345.Models.SanPham
+
+@{
+    ViewData["Title"] = "Thêm Sản Phẩm";
+}
+
+<h1>Enter</h1>
+
+<h4>SanPham</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form action="/SanPham/InsertSP" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MaSP" class="control-label">Mã Sản Phẩm</label>
+                <input asp-for="MaSP" class="form-control" />
+                <span asp-validation-for="MaSP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenSP" class="control-label">Tên Sản Phẩm</label>
+                <input asp-for="TenSP" class="form-control" />
+                <span asp-validation-for="TenSP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DVT" class="control-label">Đơn vị tính</label>
+                <input asp-for="DVT" class="form-control" />
+                <span asp-validation-for="DVT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NuocSX" class="control-label"> Nước sản xuất</label>
+                <input asp-for="NuocSX" class="form-control" />
+                <span asp-validation-for="NuocSX" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gia" class="control-label">Giá</label>
+                <input asp-for="Gia" class="form-control" />
+                <span asp-validation-for="Gia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Thêm" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

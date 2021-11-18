@@ -1,0 +1,26 @@
+﻿@{ ViewData["Tilte"] = "Liệt kê N Sản phẩm"; }
+@{
+    <h1>Nhập số lượng sản phẩm</h1>
+
+    <div>
+        <h4>Sản phẩm</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="LietKeCacSP" method="post">
+                    <div class="form-group">
+                        <label for="SoSP" class="control-label">Số sản phẩm cần liệt kê</label>
+                        <input type="text" name="SoSP" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" value="Liệt kê các sản phẩm" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+}

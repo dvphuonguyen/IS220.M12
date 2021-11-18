@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DangVuPhuongUyen_19520345.Models.HoaDon>
+
+@{
+    ViewData["Title"] = "LietKeCacHD";
+}
+
+<h1>Danh sách các hóa đơn của nhân viên vừa chọn</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Số hóa đơn
+            <th>
+                Ngày hóa đơn 
+            </th>
+            <th>
+                Mã khách hàng
+            </th>
+            <th>
+                Trị giá
+            </th>
+            <th>Views</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.SoHD
+            </td>
+            <td>
+                @item.NgayHD
+            </td>
+            <td>
+                @item.MaKH
+            </td>
+            <td>
+                @item.Trigia
+            </td>
+            <td>
+                <a href="DeleteHD?id=@item.SoHD">Delete</a>
+            </td>
+            <td>
+                <a href="ViewHD?id=@item.SoHD">View</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
