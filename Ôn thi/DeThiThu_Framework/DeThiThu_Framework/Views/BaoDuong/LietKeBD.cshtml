@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<DeThiThu_Framework.Models.BaoDuong>
+@{
+    ViewData["Title"] = "Liet ke bao duong";
+}
+<table class="table" border="1">
+    <tr>
+        <th>Ngay gio nhan</th>
+        <th>Ngay gio tra</th>
+        <th>So km</th>
+        <th>Noi dung</th>
+        <th>Chuc nang</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.NgayGioNhan</td>
+            <td>@item.NgayGioTra</td>
+            <td>@item.SoKM</td>
+            <td>@item.NoiDung</td>
+            <td>
+                <a href="/CTBD/ViewCVBD?Id=@item.MaBD">Xem</a>
+                @if (@item.NgayGioTra !="")
+                {
+                    <a>Sua</a>
+                }
+                else
+                {
+                    <a href="UpdateCVBD?Id=@item.MaBD">Sua</a>
+                }
+            </td>
+        </tr>
+    }
+</table>

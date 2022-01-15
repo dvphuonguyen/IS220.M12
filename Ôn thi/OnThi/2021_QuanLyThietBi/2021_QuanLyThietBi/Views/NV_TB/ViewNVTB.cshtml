@@ -1,0 +1,36 @@
+﻿@model _2021_QuanLyThietBi.Models.NV_TB
+
+@{
+    ViewData["Title"] = "ViewNVTB";
+}
+
+<h1>ViewNVTB</h1>
+
+<div>
+    <h4>NV_TB</h4>
+    <hr />
+    <dl class="row">
+        <form action="/NV_TB/UpdateNVTB" method="post">
+            <label for="MaNhanVien">Mã nhân viên</label>
+            <input type="text" name="MaNhanVien" value="@Model.MaNhanVien"  />
+            <br>
+            <label for="MaThietBi">Mã thiết bị</label>
+            <input type="text" name="MaThietBi" value="@Model.MaThietBi"  />
+            <br>
+            <label for="MaCanHo">Mã căn hộ</label>
+            <input type="text" name="MaCanHo" value="@Model.MaCanHo"  />
+            <br>
+            <label for="LanThu">Lần thử</label>
+            <input type="text" name="LanThu" value="@Model.LanThu"  />
+            <br>
+            <label for="NgayBaoTri">Ngày bảo trì</label>
+            <input type="date" name="NgayBaoTri" value="@Model.NgayBaoTri.ToString("yyyy-MM-dd")" />
+            <br>
+            <input type="submit" name="submit" value="Update" />
+        </form>
+    </dl>
+</div>
+<div>
+ 
+    <a asp-action="Index">Back to List</a>
+</div>

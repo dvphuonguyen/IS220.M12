@@ -1,0 +1,35 @@
+﻿@model _2021_QuanLyThietBi.Models.CanHo
+
+@{
+    ViewData["Title"] = "EnterCH";
+}
+
+<h1>EnterCH</h1>
+
+<h4>CanHo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InsertCH">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MaCanHo" class="control-label"></label>
+                <input asp-for="MaCanHo" class="form-control" />
+                <span asp-validation-for="MaCanHo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenChuHo" class="control-label"></label>
+                <input asp-for="TenChuHo" class="form-control" />
+                <span asp-validation-for="TenChuHo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

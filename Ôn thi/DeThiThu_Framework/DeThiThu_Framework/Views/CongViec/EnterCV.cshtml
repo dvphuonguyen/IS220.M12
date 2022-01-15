@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Them cong viec";
+    <h2>Them cong viec</h2>
+    <form action="/CongViec/InsertCV" method="post">
+        Ma cong viec <input type="text" name="MaCV" placeholder="CV01"><br>
+        Ten cong viec <input type="text" name="TenCV" placeholder="Thay nhot"><br>
+        Don gia <input type="text" name="DonGia" placeholder="50000"><br>
+        <input type="submit" name="submit" value="Them" placeholder="Them" class="btn btn-primary">
+    </form>
+}

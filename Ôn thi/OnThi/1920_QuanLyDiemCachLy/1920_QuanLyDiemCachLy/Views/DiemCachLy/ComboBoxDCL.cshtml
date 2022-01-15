@@ -1,0 +1,36 @@
+﻿@model IEnumerable<_1920_QuanLyDiemCachLy.Models.DiemCachLy>
+@{
+    ViewData["Title"] = "ComboBoxNV";
+}
+
+@{
+    <h1>Liệt kê diem cach ly dưới dạng Combo Box</h1>
+
+    <div>
+        <h4>Nhân Viên</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form action="/CongNhan/LietKeCN" method="post">
+                    <div class="form-group">
+                        <label for="SoSP" class="control-label">Tên diem cach ly: </label>
+                        <select name="MaDiemCachLy">
+                            @foreach (var nv in Model)
+                            {
+                                <option value="@nv.MaDiemCachLy">@nv.TenDiemCachLy</option>
+
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" value="Liệt kê diem cach ly" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+}

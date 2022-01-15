@@ -1,0 +1,54 @@
+﻿@model List<object>
+
+@{
+    ViewData["Title"] = "LietKeSL";
+}
+
+<h1>LietKeSL</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ten cong nhan
+            </th>
+            <th>
+                Nam sinh
+            </th>
+            <th>
+               Nuoc ve
+            </th>
+            <th>
+               So trieu chung
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @item.GetType().GetProperty("TenCongNhan").GetValue(item, null)
+            </td>
+            <td>
+                @item.GetType().GetProperty("NamSinh").GetValue(item, null)
+            </td>
+            <td>
+                @item.GetType().GetProperty("NuocVe").GetValue(item, null)
+            </td>
+            <td>
+                @item.GetType().GetProperty("SoTrieuChung").GetValue(item, null)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

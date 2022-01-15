@@ -1,0 +1,49 @@
+﻿@model IEnumerable<_2021_QuanLyThietBi.Models.NV_TB>
+
+@{
+    ViewData["Title"] = "LietKeNVTB";
+}
+
+<h1>LietKeNVTB</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaThietBi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaCanHo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LanThu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayBaoTri)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaThietBi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaCanHo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LanThu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayBaoTri)
+            </td>
+            <td>
+                <a class="btn btn-danger" href="DeleteNVTB?Id1=@item.MaNhanVien&Id2=@item.MaThietBi&Id3=@item.MaCanHo&Id4=@item.LanThu">Xóa</a>
+                <a class="btn btn-outline-secondary" href="ViewNVTB?Id1=@item.MaNhanVien&Id2=@item.MaThietBi&Id3=@item.MaCanHo&Id4=@item.LanThu">View</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

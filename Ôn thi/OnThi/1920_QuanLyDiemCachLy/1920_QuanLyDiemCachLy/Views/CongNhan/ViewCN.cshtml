@@ -1,0 +1,51 @@
+﻿@model _1920_QuanLyDiemCachLy.Models.CongNhan
+
+@{
+    ViewData["Title"] = "ViewCN";
+}
+
+<h1>ViewCN</h1>
+
+<div>
+    <h4>CongNhan</h4>
+    <hr />
+    <dl class="row">
+        <form action="/CongNhan/UpdateCN" method="post">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.MaCongNhan)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.MaCongNhan)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.TenCongNhan)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.TenCongNhan)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.GioiTinh)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.GioiTinh)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.NamSinh)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.NamSinh)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.NuocVe)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.NuocVe)
+            </dd>
+            <input type="submit" name="submit" value="Update" />
+        </form>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

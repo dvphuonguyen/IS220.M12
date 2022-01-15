@@ -1,0 +1,40 @@
+﻿@model IEnumerable<_1920_QuanLyDiemCachLy.Models.CongNhan>
+
+@{
+    ViewData["Title"] = "LietKeCN";
+}
+
+<h1>LietKeCN</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaCongNhan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenCongNhan)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaCongNhan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenCongNhan)
+            </td>
+            <td>
+                <a class="btn btn-danger" href="DeleteCN?Id1=@item.MaCongNhan">Xóa</a>
+                <a class="btn btn-outline-secondary" href="ViewCN?Id1=@item.MaCongNhan">View</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

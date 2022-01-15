@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model DeThiThu_Framework.Models.BaoDuong;
+@{
+    ViewData["Title"] = "Cap nhat ct_bd";
+
+}
+<h2>Cap nhat bao duong</h2>
+<form action="/BaoDuong/TBUpdate" method="post">
+    <input type="hidden" name="MaBD" value="@Model.MaBD">
+    Ngay gio nhan <input type="date" name="NgayGioNhan" value="@Model.NgayGioNhan"><br>
+    Ngay gio tra <input type="date" name="NgayGioTra" value="@Model.NgayGioTra"><br>
+    So km <input type="text" name="SoKM" value="@Model.SoKM"><br>
+    Noi dung <input type="text" name="NoiDung" value="@Model.NoiDung"><br>
+    <input type="submit" name="submit" value="Cap nhat" class="btn btn-primary">
+</form>

@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model IEnumerable<DeThiThu_Framework.Models.CongViec>;
+
+@{
+    ViewData["Title"] = "View CTBD";
+}
+@{
+    var thanhtoan = 0.0;
+    @foreach (var item in Model)
+    {
+        thanhtoan += @item.DonGia;
+    }
+}
+
+<table class="table" border="1">
+    <tr>
+        
+        <td>Ngay gio nhan <input type="text" name="NgayGioNhan" value="@ViewBag.bd.NgayGioNhan"></td>
+        <td>Ngay gio nhan <input type="text" name="NgayGioTra" value="@ViewBag.bd.NgayGioTra"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Thanh toan <input type="text" name="ThanhToan" value="@thanhtoan"></td>
+    </tr>
+</table>
+<table class="table" border="1">
+    <tr>
+        <th>Ten cong viec</th>
+        <th>Don gia</th>
+        <th>Chuc nang</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TenCV</td>
+            <td>@item.DonGia</td>
+            <td><a href="DeleteCVBD?Id1=@ViewBag.bd.MaBD&Id2=@item.MaCV">Xoa</td>
+        </tr>
+    }
+</table>
