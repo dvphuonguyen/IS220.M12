@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "X6RqO5zrtg/kx0ro0o6NF3QQNaeulr+4L9hE4gXpNl7WRInC6oK0xHoRTPVlM6bvbmDZ5kcRpgTZ8rGc8O7FqQ==",
+  "success": true,
+  "projectFilePath": "D:\\__Nam3_HK1\\OnThiFramwork\\Tai lieu\\firstWeb\\firstWeb\\firstWeb\\firstWeb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\phuon\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\phuon\\.nuget\\packages\\mysql.data\\6.10.9\\mysql.data.6.10.9.nupkg.sha512",
+    "C:\\Users\\phuon\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
+    "C:\\Users\\phuon\\.nuget\\packages\\system.security.accesscontrol\\4.4.0\\system.security.accesscontrol.4.4.0.nupkg.sha512",
+    "C:\\Users\\phuon\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+    "C:\\Users\\phuon\\.nuget\\packages\\system.security.permissions\\4.4.1\\system.security.permissions.4.4.1.nupkg.sha512",
+    "C:\\Users\\phuon\\.nuget\\packages\\system.security.principal.windows\\4.4.0\\system.security.principal.windows.4.4.0.nupkg.sha512",
+    "C:\\Users\\phuon\\.nuget\\packages\\system.text.encoding.codepages\\4.4.0\\system.text.encoding.codepages.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
